@@ -96,11 +96,8 @@ vi sieve(int n) {
 }
 
 void solve() {
-    string s, t;
-    cin >> s;
-    cin >> t;
-
-    
+    int n; cin >> n;
+    cout << 2*(n-1) << endl;
 
 }
 
@@ -114,7 +111,7 @@ int32_t main() {
 #endif
 
     int t = 1;
-    // cin >> t;
+    cin >> t;
     while (t--) solve();
 
     return 0;
