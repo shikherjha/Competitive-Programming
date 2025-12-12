@@ -97,8 +97,25 @@ vi sieve(int n) {
 
 void solve() {
     int n; cin >> n;
-    
-
+    vpi tmp;
+    f(i,0,n){
+        int k; cin >> k;
+        int maxi = 0;
+        f(j,0,k){
+            int x; cin >> x;
+            maxi = max(maxi, x-j+1);
+        }
+        tmp.push_back({maxi,k});
+    }
+    sort(all(tmp));
+    int ans = 0;
+    int sum = 0;
+    for(auto it:tmp){
+        int mx = it.first, sze = it.second;
+        ans = max(ans, mx-sum);
+        sum += sze;
+    }
+    cout << ans << endl;
 }
 
 int32_t main() {
@@ -111,7 +128,7 @@ int32_t main() {
 #endif
 
     int t = 1;
-    // cin >> t;
+    cin >> t;
     while (t--) solve();
 
     return 0;
