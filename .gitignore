@@ -1,0 +1,12 @@
+.cph/
+.vscode/
+
+# Competitive programming build outputs
+*.exe
+*.out
+*.obj
+*.o
+*.class
+
+# IDE/runtime clutter
+.vs/
